@@ -2779,7 +2779,7 @@ class WebSocketServerProtocol(WebSocketProtocol):
 
         response += "X-Powered-By: AutobahnPython/{0}\x0d\x0a".format(__version__)
 
-        response += "Upgrade: WebSocket\x0d\x0a"
+        response += "Upgrade: websocket\x0d\x0a"
         response += "Connection: Upgrade\x0d\x0a"
 
         # optional, user supplied additional HTTP headers
@@ -3404,7 +3404,7 @@ class WebSocketClientProtocol(WebSocketProtocol):
             request += "User-Agent: %s\x0d\x0a" % self.factory.useragent
 
         request += "Host: %s:%d\x0d\x0a" % (self.factory.host, self.factory.port)
-        request += "Upgrade: WebSocket\x0d\x0a"
+        request += "Upgrade: websocket\x0d\x0a"
         request += "Connection: Upgrade\x0d\x0a"
 
         # this seems to prohibit some non-compliant proxies from removing the
